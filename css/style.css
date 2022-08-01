@@ -1,0 +1,26 @@
+@import url("https://rsms.me/inter/inter.css");
+@supports (font-variation-settings: normal) {
+	html {
+		font-family: "Inter var", sans-serif;
+	}
+}
+
+/** Variables */
+:root {
+	--background-main: #edf4f7;
+	--background-side: #f4f8fa;
+	--primary-blue: #32444d;
+	--secondary-blue: #b3c3cc;
+	--primary-orange: #ff6719;
+	--secondary-orange: #ffaa80;
+}
+
+* {
+	font-family: Inter, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: var(--primary-blue);
+}
+
+body {
+	background-color: var(--background-main);
+}
