@@ -1,16 +1,4 @@
-const todaySvg = document.querySelector("svg");
+const todaySvg = d3.select("svg");
+const rectTags = d3.selectAll("rect");
 
-todayData.forEach((data, i) => {
-	const rectTag = document.createElementNS(
-		"http://www.w3.org/2000/svg",
-		"rect"
-	);
-
-	rectTag.setAttribute("x", "20");
-	rectTag.setAttribute("y", 20 * i);
-	rectTag.setAttribute("width", data);
-	rectTag.setAttribute("height", "10");
-
-	todaySvg.appendChild(rectTag);
-});
-
+rectTags.data(todayData).attr("width", data => data).attr("height", 10).attr("y", (_, i) => i * 15)
