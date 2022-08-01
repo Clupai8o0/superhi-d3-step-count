@@ -18,9 +18,40 @@
 * {
 	font-family: Inter, Arial, Helvetica, sans-serif;
 	font-size: 16px;
+	line-height: 1.5;
 	color: var(--primary-blue);
 }
 
 body {
 	background-color: var(--background-main);
+
+	display: grid;
+	grid-template-columns: 320px 1fr;
+	min-height: 100vh;
+}
+
+nav {
+	background-color: var(--background-side);
+	padding: 48px;
+}
+
+main {
+	padding: 48px;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h2 {
+	color: var(--secondary-blue);
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 24px 0 8px 0;
+}
+
+p {
+	font-size: 24px;
 }
