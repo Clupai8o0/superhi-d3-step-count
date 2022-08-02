@@ -28,12 +28,6 @@ monthGroups
 	.attr("cy", 0)
 	.attr("r", radiusScale(20000))
 	.attr("class", "ring");
-monthGroups
-	.append("circle")
-	.attr("cx", 0)
-	.attr("cy", 0)
-	.attr("r", radiusScale(30000))
-	.attr("class", "ring");
 
 //* Creating the bars
 monthGroups
@@ -49,11 +43,15 @@ monthGroups
 	.attr("r", (d) => radiusScale(d));
 
 //* Adding text
-// monthSvg
-// 	.selectAll("text")
-// 	.data(todayData)
-// 	.enter()
-// 	.append("text")
-// 	.attr("x", (d, i) => i * 36)
-// 	.attr("y", 130)
-// 	.text((_, i) => i);
+monthGroups
+	.append("text")
+	.attr("class", "day")
+	.attr("x", 0)
+	.attr("y", 65)
+	.text((_, i) => i + 1);
+monthGroups
+	.append("text")
+	.attr("class", "steps")
+	.attr("x", 0)
+	.attr("y", 65)
+	.text((d) => d);

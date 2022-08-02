@@ -93,3 +93,16 @@ circle.ring {
 	fill: none;
 	stroke: var(--secondary-blue);
 }
+
+text.day {
+	opacity: 1;
+	transition: opacity 0.25s;
+}
+
+g:hover text.day {
+	opacity: 0;
+}
+
+svg.month text {
+	fill: var(--primary-blue);
+}
