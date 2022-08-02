@@ -101,6 +101,7 @@ text.day {
 
 g:hover text.day {
 	opacity: 0;
+	cursor: pointer;
 }
 
 svg.month text {
