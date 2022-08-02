@@ -13,7 +13,7 @@ monthSvg
 	.attr("cy", (_, i) => Math.floor(i / 7) * 100 + 60)
 	.attr("r", 0)
 	.transition()
-	.duration(1000)
+	.duration(250)
 	.delay((_, i) => i * 20 + 500)
   .ease(d3.easeCubicOut)
 	.attr("r", (d) => radiusScale(d));
