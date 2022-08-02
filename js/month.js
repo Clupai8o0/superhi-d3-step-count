@@ -9,8 +9,8 @@ monthSvg
 	.data(monthData)
 	.enter()
 	.append("circle")
-	.attr("cx", (_, i) => i * 20)
-	.attr("cy", (d) => 40)
+	.attr("cx", (_, i) => (i % 7) * 120 + 60)
+	.attr("cy", (_, i) => Math.floor(i / 7) * 100 + 60)
 	.attr("r", 5)
 
 //* Adding text
