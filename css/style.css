@@ -61,9 +61,7 @@ rect {
 }
 
 circle {
-	stroke: var(--primary-blue);
-	stroke-width: 2;
-	fill: none;
+	fill: var(--primary-blue)
 }
 
 text {
