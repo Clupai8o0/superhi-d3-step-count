@@ -28,11 +28,22 @@ todayGroups
 	.append("text")
 	.attr("x", 12)
 	.attr("y", 140)
+	.attr("class", "hours")
 	.text((_, i) => i);
 
 //* top text
 todayGroups
 	.append("text")
 	.attr("x", 12)
-	.attr("y", (d, i) => 110 - barScale(d))
+	.attr("y", (d) => 110 - barScale(d))
+	.attr("class", "steps")
 	.text((d) => d);
+
+  //* transparent bar
+todayGroups
+	.append("rect")
+	.attr("x", 0)
+	.attr("y", 0)
+	.attr("width", 24)
+	.attr("height", 140)
+	.attr("class", "transparent");

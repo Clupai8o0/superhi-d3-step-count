@@ -58,6 +58,7 @@ p {
 
 rect {
 	fill: var(--primary-orange);
+	transition: fill 0.5s;
 }
 
 circle {
@@ -68,4 +69,22 @@ text {
 	fill: var(--primary-orange);
 	text-anchor: middle;
 	font-size: 14px;
+}
+
+rect:hover {
+	fill: var(--primary-blue);
+	cursor: pointer;
+}
+
+text.steps {
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+g:hover text.steps {
+	opacity: 1;
+}
+
+rect.transparent {
+	opacity: 0;
 }
