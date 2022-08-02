@@ -47,11 +47,11 @@ monthGroups
 	.append("text")
 	.attr("class", "day")
 	.attr("x", 0)
-	.attr("y", 65)
+	.attr("y", 70)
 	.text((_, i) => i + 1);
 monthGroups
 	.append("text")
 	.attr("class", "steps")
 	.attr("x", 0)
-	.attr("y", 65)
+	.attr("y", 70)
 	.text((d) => d);
