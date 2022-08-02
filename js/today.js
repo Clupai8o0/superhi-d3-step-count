@@ -1,5 +1,8 @@
 const todaySvg = d3.select("svg.today");
 
+//* formatter
+const hoursFormat = d3.format("02")
+
 //* Adding a range limiter
 const barScale = d3.scaleLinear().domain([0, 2000]).range([1, 112]);
 
@@ -29,7 +32,7 @@ todayGroups
 	.attr("x", 12)
 	.attr("y", 140)
 	.attr("class", "hours")
-	.text((_, i) => i);
+	.text((_, i) => hoursFormat(i));
 
 //* top text
 todayGroups
