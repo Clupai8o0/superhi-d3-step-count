@@ -65,3 +65,9 @@ circle {
 	stroke-width: 2;
 	fill: none;
 }
+
+text {
+	fill: var(--primary-orange);
+	text-anchor: middle;
+	font-size: 14px;
+}
