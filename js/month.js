@@ -15,12 +15,33 @@ const monthGroups = monthSvg
 		return `translate(${x}, ${y})`;
 	});
 
+//* Adding rings
+monthGroups
+	.append("circle")
+	.attr("cx", 0)
+	.attr("cy", 0)
+	.attr("r", radiusScale(10000))
+	.attr("class", "ring");
+monthGroups
+	.append("circle")
+	.attr("cx", 0)
+	.attr("cy", 0)
+	.attr("r", radiusScale(20000))
+	.attr("class", "ring");
+monthGroups
+	.append("circle")
+	.attr("cx", 0)
+	.attr("cy", 0)
+	.attr("r", radiusScale(30000))
+	.attr("class", "ring");
+
 //* Creating the bars
 monthGroups
 	.append("circle")
 	.attr("cx", 0)
 	.attr("cy", 0)
 	.attr("r", 0)
+	.attr("class", "actual")
 	.transition()
 	.duration(250)
 	.delay((_, i) => i * 20 + 500)

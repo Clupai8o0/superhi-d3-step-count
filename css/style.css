@@ -61,7 +61,7 @@ rect {
 	transition: fill 0.5s;
 }
 
-circle {
+circle.actual {
 	fill: var(--primary-blue)
 }
 
@@ -87,4 +87,9 @@ g:hover text.steps {
 
 rect.transparent {
 	opacity: 0;
+}
+
+circle.ring {
+	fill: none;
+	stroke: var(--secondary-blue);
 }
