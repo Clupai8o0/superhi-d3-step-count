@@ -1,7 +1,9 @@
 const monthSvg = d3.select("svg.month");
 
 //* Adding a range limiter
-// const barScale = d3.scaleLinear().domain([0, 2000]).range([1, 112]);
+const radiusScale = d3.scaleSqrt()
+  .domain([0, 30000])
+  .range([0, 50])
 
 //* Creating the bars
 monthSvg
@@ -11,7 +13,7 @@ monthSvg
 	.append("circle")
 	.attr("cx", (_, i) => (i % 7) * 120 + 60)
 	.attr("cy", (_, i) => Math.floor(i / 7) * 100 + 60)
-	.attr("r", 5)
+	.attr("r", (d) => radiusScale(d))
 
 //* Adding text
 // monthSvg
